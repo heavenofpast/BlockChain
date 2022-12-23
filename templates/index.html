@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <script src="{{ url_for('static', filename = 'index.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'index.css') }}">
+</head>
+<body>
+<h1 style="text-align:center">区块链系统</h1>
+<hr/>
+<div style="display: flex">
+    <div class="menu">
+        <button onclick="register()">注册成为节点</button>
+        <button onclick="peers()">查看邻居节点</button>
+        <button onclick="update_peers()">更新邻居节点</button>
+    </div>
+    <div class="menu">
+        <button onclick="chain()">查看区块链</button>
+        <button onclick="update_chain()">更新区块链</button>
+        <button onclick="transaction_pool()">查看交易池</button>
+    </div>
+    <div class="menu">
+        <button onclick="mine()">挖矿</button>
+        <button onclick="transaction()">交易</button>
+    </div>
+    <div class="menu">
+        <button onclick="wallet()">查看钱包信息</button>
+    </div>
+</div>
+</body>
+</html>

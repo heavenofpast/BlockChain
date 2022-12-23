@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>挖矿结果</title>
+    <style>
+     table {
+        border: 1px solid #000000;
+        border-collapse: collapse;
+    }
+    th, td {
+        border: 1px solid #000000;
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+    {% if success %}
+        <div><strong>挖矿成功</strong></div>
+    {% else %}
+        <div><strong>挖矿失败</strong></div>
+    {% endif %}
+    <hr/>
+    <table>
+        <caption><h3>挖矿结果</h3></caption>
+        <tr>
+            <th width="450px">邻居地址</th>
+            <th width="200px">认证结果</th>
+        </tr>
+        {% for c in content %}
+            <tr>
+            {% for value in c %}
+                <td>{{ value }}</td>
+            {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

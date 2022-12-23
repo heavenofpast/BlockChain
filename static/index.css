@@ -1,0 +1,21 @@
+button {
+    width: 200px;
+    position: relative;
+    background-color: #ffffff;
+	border:2px solid #008cba;
+    border-radius:8px;
+    font-size: 18px;
+    color:  #87cefa;
+    padding: 10px 20px;
+    margin: 4px 2px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.menu {
+    width: 300px;
+}

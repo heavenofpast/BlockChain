@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>交易池</title>
+</head>
+<body>
+<div>
+    {% if transaction|length == 0 %}
+        <div>空</div>
+    {% else %}
+        <p><strong>transactions:</strong></p>
+        {% for t in transaction %}
+        <p>{{ t }}</p>
+        {% endfor %}
+    {% endif %}
+</div>
+</body>
+</html>

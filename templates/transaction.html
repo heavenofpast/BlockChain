@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>交易</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'transaction.css') }}">
+</head>
+<body>
+    <p><strong>当前金额：</strong>{{ money}}</p>
+    <form action="/deal_transaction" method="POST">
+        <p><strong>接收方地址：</strong><input class="mytxt" type="text" name="recipient" required="required" style="width: 500px;"></p>
+        <p><strong>金额：</strong><input class="mytxt" type="number" name="amount" min="0" required="required"></p>
+        <p><input type="submit" value="提交"></p>
+    </form>
+</body>
+</html>

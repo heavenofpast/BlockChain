@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查看钱包信息</title>
+    <style>
+     table {
+        border: 1px solid #000000;
+        border-collapse: collapse;
+    }
+    th, td {
+        border: 1px solid #000000;
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+    <p><strong>当前金额：</strong>{{ money}}</p>
+    <p><strong>交易地址：</strong>{{ address }}</p>
+    <hr/>
+    <table>
+        <caption><h3>交易记录</h3></caption>
+        <tr>
+            <th width="450px">发送方地址</th>
+            <th width="450px">接收方地址</th>
+            <th width="80px">金额</th>
+        </tr>
+        {% for t in transaction %}
+            <tr>
+            {% for value in t %}
+                <td>{{ value }}</td>
+            {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
